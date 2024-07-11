@@ -1,0 +1,158 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.logoutButton {
+  padding: 10px 20px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logoutButton:hover {
+  background-color: #ff3333;
+}
+
+.messagesContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 12px;
+  word-wrap: break-word;
+}
+
+.myMessage {
+  align-self: flex-end;
+  background-color: #DCF8C6;
+  color: #333;
+}
+
+.otherMessage {
+  align-self: flex-start;
+  background-color: #ECE5DD;
+  color: #333;
+}
+
+.messageUsername {
+  padding: 0.2rem 0;
+  text-align: left;
+  color: rgb(15, 149, 216);
+}
+
+.messageContent {
+  margin-right: 10px;
+}
+
+.messageTimestamp {
+  color: grey;
+  font-size: 0.8em;
+  margin-left: auto;
+}
+
+.messageInput {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.sendButton {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sendButton:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .chatContainer {
+    padding: 15px;
+  }
+
+  .messagesContainer {
+    max-height: 300px;
+  }
+
+  .message {
+    padding: 8px;
+    margin: 3px 0;
+  }
+
+  .messageInput {
+    width: calc(100% - 16px);
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .sendButton {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logoutButton {
+    padding: 8px 16px;
+  }
+
+  .messagesContainer {
+    max-height: 250px;
+  }
+
+  .messageInput {
+    width: calc(100% - 14px);
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .sendButton {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
